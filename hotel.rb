@@ -20,7 +20,7 @@ CSV.open("tmp/sizuoka.csv", "a") do |csv|
     response = client.request!(pref: REQUEST_PARAM_PREF, start: start_from)
 
     hotel_hashs = Hash.from_xml(response.body.to_xml).dig("Results", "Hotel")
-    break if hotel_hashs.nil? # 空の場合おわる
+    break if hotel_hashs.nil?
 
     hotel_hashs.map do |hotel_hash|
       rows = Clients::Hotel::HOTEL_RESPONSE_FIELDS.each_with_object([]) do |field, array|

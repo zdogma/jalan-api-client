@@ -20,7 +20,7 @@ CSV.open("tmp/stock_sizuoka.csv", "a") do |csv|
     response = client.request!(pref: REQUEST_PARAM_PREF, start: start_from)
 
     stock_hashs = Hash.from_xml(response.body.to_xml).dig("Results", "Plan")
-    break if stock_hashs.nil? # 空の場合おわる
+    break if stock_hashs.nil?
 
     stock_hashs.map do |stock_hash|
       rows = Clients::Stock::RESPONSE_FIELDS.each_with_object([]) do |field, array|

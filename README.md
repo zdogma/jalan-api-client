@@ -6,6 +6,14 @@ jalan-api-client
 
 ## Usage
 ```
+# ホテル API
+bundle exec ruby hotel.rb
+
+# 温泉検索 API
+bundle exec ruby hot_spring.rb
+
+# 空室検索 API
+bundle exec ruby stock.rb
 ```
 
 ## Contribution

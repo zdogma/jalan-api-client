@@ -10,6 +10,7 @@ jalan-api-client
 JALAN_API_KEY=xxxxx
 ```
 
+### commands
 ```
 # ホテル API
 bundle exec ruby hotel.rb

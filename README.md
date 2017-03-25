@@ -5,6 +5,11 @@ jalan-api-client
 じゃらんの API から情報をとってくるためのクライアント。
 
 ## Usage
+### .env
+```
+JALAN_API_KEY=xxxxx
+```
+
 ```
 # ホテル API
 bundle exec ruby hotel.rb
